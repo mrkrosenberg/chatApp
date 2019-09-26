@@ -48,8 +48,8 @@ export class ChatRoom extends Component {
         console.log('nextMessage: ' + nextMessage)
 
         var list = Object.assign([], this.state.messages)
-        // console.log('messages: ' + this.state.messages)
-        // console.log('list: ' + list)
+        console.log('messages: ' + this.state.messages)
+        console.log('list: ' + list)
         list.push(nextMessage)
         console.log(list)
         this.setState({
