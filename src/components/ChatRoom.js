@@ -28,18 +28,35 @@ export class ChatRoom extends Component {
             ],
 
         }
-    }
+    };
 
     updateMessage(e) {
         console.log('message updated: ' + e.target.value);
         this.setState({
             message: e.target.value,
         })
-    }
+    };
 
     submitMessage() {
         console.log('message submitted: ' + this.state.message)
-    }
+        // console.log(this.state.messages)
+
+        const nextMessage = {
+            id: this.state.messages.length,
+            body: this.state.message
+        }
+        console.log('nextMessage: ' + nextMessage)
+
+        var list = Object.assign([], this.state.messages)
+        // console.log('messages: ' + this.state.messages)
+        // console.log('list: ' + list)
+        list.push(nextMessage)
+        console.log(list)
+        this.setState({
+            messages: list
+        })
+
+    };
 
     render() {
 
@@ -60,6 +77,6 @@ export class ChatRoom extends Component {
             </div>
         )
     }
-}
+};
 
 export default ChatRoom
