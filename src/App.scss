@@ -1,3 +1,7 @@
+// Imports
+@import './style/variables.scss';
+
+
 .App {
   text-align: center;
 }
@@ -22,6 +26,19 @@
 .App-link {
   color: #61dafb;
 }
+
+/* Messages */
+
+.messages {
+  color: $primary-color;
+}
+
+
+
+
+
+
+/* Animations */
 
 @keyframes App-logo-spin {
   from {
