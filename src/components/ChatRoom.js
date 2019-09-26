@@ -1,34 +1,25 @@
 import React, { Component } from 'react'
 
+// Env variables
+// import firebaseConfig from '../env-variables';
+
 export class ChatRoom extends Component {
 
     constructor(props, context) {
+
         super(props, context)
         this.updateMessage = this.updateMessage.bind(this)
         this.submitMessage = this.submitMessage.bind(this)
         this.state = {
             message: '',
-            messages: [
-                {
-                    id: 0,
-                    body: 'message'
-                },
-                {
-                    id: 1,
-                    body: 'message'
-                },
-                {
-                    id: 2,
-                    body: 'message'
-                },
-                {
-                    id: 3,
-                    body: 'message'
-                }
-            ],
-
+            messages: [],
         }
+
     };
+
+    componentDidMount() {
+        console.log('did mount')
+    }
 
     updateMessage(e) {
         console.log('message updated: ' + e.target.value);
