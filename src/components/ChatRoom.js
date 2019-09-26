@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 
-// Env variables
-// import firebaseConfig from '../env-variables';
 
 export class ChatRoom extends Component {
 
