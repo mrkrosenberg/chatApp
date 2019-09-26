@@ -11,19 +11,19 @@ export class ChatRoom extends Component {
             messages: [
                 {
                     id: 0,
-                    body: 'first message'
+                    body: 'message'
                 },
                 {
                     id: 1,
-                    body: 'second message'
+                    body: 'message'
                 },
                 {
                     id: 2,
-                    body: 'third message'
+                    body: 'message'
                 },
                 {
                     id: 3,
-                    body: 'fourth message'
+                    body: 'message'
                 }
             ],
 
