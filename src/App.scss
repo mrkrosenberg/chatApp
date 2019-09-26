@@ -27,8 +27,13 @@
   color: #61dafb;
 }
 
-/* Messages */
+// Header
+.header {
+  color: $primary-color;
+}
 
+
+// ChatRoom Component
 .messages {
   color: $primary-color;
 }

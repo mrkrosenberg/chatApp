@@ -56,7 +56,7 @@ export class ChatRoom extends Component {
                 </ol>
                <input onChange={this.updateMessage} type="text" placeholder="message" /> 
                <br/>
-               <button onClick={this.submitMessage} >Submit Message</button>
+               <button onClick={this.submitMessage} >Return</button>
             </div>
         )
     }
