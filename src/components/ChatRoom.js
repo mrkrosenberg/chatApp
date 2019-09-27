@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import * as firebase from 'firebase';
+
 
 export class ChatRoom extends Component {
 
@@ -17,6 +19,27 @@ export class ChatRoom extends Component {
 
     componentDidMount() {
         console.log('did mount')
+
+        const rootRef = firebase.database().ref().child('chat');
+        const chatRef = rootRef.child('text');
+        chatRef.on('value', snap => {
+            // this.setState({
+            //     messages: snap.val()
+            // })
+            console.log('here it is: ' + snap.val())
+        })
+
+        // firebase.database().ref('messages/').on('value', (snapshot) =>{
+
+        //     const currentMessages = snapshot.val()
+
+        //     if (currentMessages != null) {
+        //         this.setState({
+        //             messages: currentMessages
+        //         })
+        //     }
+
+        // })
     }
 
     updateMessage(e) {

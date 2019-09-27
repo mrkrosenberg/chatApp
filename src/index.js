@@ -6,8 +6,10 @@ import * as serviceWorker from './serviceWorker';
 
 
 // Firebase Stuff
-// import * as firebase from 'firebase';
-// import firebaseConfig from '../env-variables';
+import * as firebase from 'firebase/app';
+import firebaseConfig from './env-variables';
+
+firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
